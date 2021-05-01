@@ -1,0 +1,60 @@
+This Simple Hello World Python Application Write with the flask.
+Please follow below steps to run the application on docker and kubernetes environments.
+
+First Checkout the files for m below github URL
+
+
+
+===============================================================================================
+
+    Then execute below commands for run this application on docker
+
+1 . Running Application On Docker Linux 
+
+    commands : chmod +x execute_shell
+               ./execute_shell
+		   
+2 . Check the docker container is on running status
+
+    Command  : docker ps
+
+3 . You can see the Docker is up and running
+
+4 . Access the application from 8000 port on the server
+
+    http://ip:8000
+		   
+================================================================================================
+		   
+    Running Application On kubernetes
+
+1 . First Create nemespace in kubernetes cluster
+
+    Command : kubectl create namespace practical-test
+ 
+2 . Then apply practical-test-kubernetes.yml file
+
+    Command : kubectl create -f practical-test-kubernetes.yml -n practical-test
+ 
+3 . After apply the yaml you can check using below commands
+
+4 . Check deployment status
+ 
+    Command : kubectl get deployments -n practical-test
+ 
+5 . Check pod status
+
+    Command : kubectl get pods -n practical-test
+
+6 . Check the service status
+
+    Command : kubectl get svc -n practical-test
+
+7 . Access the application from 30007 Nodeport of kubernetes cluster
+
+    http://ip:30007 
+	
+	
+Application deployed as the deployement on kubernetes and we can use helm charts for deployment. 
+
+ 

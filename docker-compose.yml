@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+   practicaltest:
+     image: "practical_test:latest"
+     ports:
+       - "8000:8000"
+     restart: always
+
+
+
